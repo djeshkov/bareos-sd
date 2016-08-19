@@ -8,12 +8,17 @@
 docker run \
   --rm \
   --name bareos-sd \
-  -v /opt/bareos/conf:/etc/bareos \
-  -v /opt/backup-storage:/storage \
+  -v /data/etc:/etc/bareos \
+  -v /data/storage:/storage \
+  -p 9103:9103 \
   --hostname bareos-sd \
   --link bareos-dir:bareos-dir \
   djeshkov/bareos-sd
 ```
+
+### Adding more devices
+
+TODO
 
 ### CIFS/SSHFS Mount
 For cifs or sshfs mounts you need some more rights:
