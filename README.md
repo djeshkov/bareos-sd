@@ -12,7 +12,7 @@ docker run \
   -v /opt/backup-storage:/storage \
   --hostname bareos-sd \
   --link bareos-dir:bareos-dir \
-  shoifele/bareos-sd
+  djeshkov/bareos-sd
 ```
 
 ### CIFS/SSHFS Mount
